@@ -1,0 +1,21 @@
+server:
+  port: 8081
+topic:
+  name: account.created
+spring:
+  kafka:
+    consumer:
+      group-id: "default"
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: admin
+    driverClassName: org.postgresql.Driver
+  sql:
+    init:
+      platform: postgres
